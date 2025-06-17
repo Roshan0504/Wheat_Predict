@@ -18,7 +18,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load your ML model
 model  = load_model('wheat.h5')
-CLASS_NAMES = ['Septoria','Brown rust', 'Healthy']  # Update with your classes
+CLASS_NAMES = ['Septoria','Brown rust']  # Update with your classes
 
 @app.route('/')
 def start_page():
@@ -64,7 +64,6 @@ def predict_page():
 if __name__ == '__main__':
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     app.run(debug=True)
-
 
 
 
